@@ -24,17 +24,17 @@ The HyperDrive part of the pipeline included a random parameter sampling object 
 
 The bandit early stopping policy was used to stop training when deviating 20% from the best run after 5 intervals, checking after every 3.
 
-The best performing model after 20 run was the logistic regression with C equal to 0.012214103872074666 and max_iter equal to 93. 
+The best performing model after 20 runs was the logistic regression with C equal to 0.7916482797373028 and max_iter equal to 94, with an accuracy of 0.9086495. 
 
 ## AutoML
-The AutoML experiment took the dataset and performed a number of preprocessing actions prior to training a variety of models on it. The best model was the VotingEnsemble, which had an accuracy of 0.9165 
+The AutoML experiment took the dataset and performed a number of preprocessing actions prior to training a variety of models on it. The best model was the VotingEnsemble, which had an accuracy of 0.9165 (which is higher than the 0.9086495 obtained by Logistic Regression)
 
 ## Pipeline comparison
 AutoML is a very powerful feature because it tries many different models that might make different assumptions about the data. A voting ensemble model provides better predictions as it uses a diverse set of models that make different errors, hence why the VotingEnsemble gave better accuracy.
 
 ## Future work
-More careful consideration of the features is something that could potentially help with the performance of the models. 
+More careful consideration of the features is something that could potentially help with the performance of the models.
+Also looking into ways of handling the unbalanced dataset. Using accuracy on an unbalanced dataset is misleading.
 
 ## Proof of cluster clean up
-**If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
-**Image of cluster marked for deletion**
+Cluster was cleaned up.
